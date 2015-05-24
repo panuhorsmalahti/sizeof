@@ -1,6 +1,6 @@
 #include <node.h>
 #include <nan.h>
-#include "functions.h"
+#include "library.h"
 
 using v8::FunctionTemplate;
 using v8::Handle;
