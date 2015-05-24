@@ -3,5 +3,11 @@
 
 NAN_METHOD(sizeOf) {
     NanScope();
-    NanReturnValue(NanNew<v8::Number>(0));
+    if (args.Length() == 0) {
+      NanReturnValue(NanNew<v8::Number>(0));
+    } else if (args.Length() > 1) {
+      return NanThrowError("Too many arguments!");
+    } else {
+      NanReturnValue(NanNew<v8::Number>(1));
+    }
 }
