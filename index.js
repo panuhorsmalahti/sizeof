@@ -25,7 +25,7 @@ function sizeOfDeep(value) {
                         .map(function (key) {
                           return sizeOfDeep(value[key]);
                         })
-                        .reduce(sum);
+                        .reduce(sum, 0);
   } else {
     var args = Array.prototype.slice.call(arguments);
     return module.exports.sizeOf.apply(this, args);
