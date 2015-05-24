@@ -1,6 +1,11 @@
 var SizeOfNative = require('bindings')('SizeOf');
 module.exports = SizeOfNative;
 
+/**
+ * Returns the size of the value.
+ * @param {any} value
+ * @returns {number} The size of the value
+ */
 var sizeOf = module.exports.sizeOf;
 
 /**
