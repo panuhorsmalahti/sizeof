@@ -24,4 +24,25 @@ describe('native extension', function() {
   it('should return a size > 0 for a number', function() {
     assert(sizeOf.sizeOf(0) > 0);
   });
+
+  describe("sizeOfDeep", function() {
+    it('should return a size 0 for no arguments', function() {
+      assert.equal(sizeOf.sizeOfDeep(), 0);
+    });
+
+    it('should throw an error for more than 1 argument', function() {
+      var throwed = false;
+      try {
+        sizeOf.sizeOfDeep(0, 1);
+      } catch (error) {
+        assert.equal(error.message, "Too many arguments!")
+        throwed = true;
+      }
+      assert(throwed);
+    });
+
+    it('should return a size > 0 for a number', function() {
+      assert(sizeOf.sizeOfDeep(0) > 0);
+    });
+  })
 });

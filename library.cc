@@ -8,6 +8,6 @@ NAN_METHOD(sizeOf) {
     } else if (args.Length() > 1) {
       return NanThrowError("Too many arguments!");
     } else {
-      NanReturnValue(NanNew<v8::Number>(1));
+      NanReturnValue(NanNew<v8::Number>(sizeof(args[0])));
     }
 }
