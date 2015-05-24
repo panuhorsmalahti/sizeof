@@ -1,9 +1,10 @@
 {
+  "name": "sizeOf",
   "main": "index.js",
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp build",
-    "test": "mocha"
+    "test": "node-gyp build && mocha"
   },
   "devDependencies": {
     "mocha": "^2.2.5",
